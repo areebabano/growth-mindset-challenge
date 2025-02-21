@@ -54,7 +54,7 @@ api_key = st.secrets.get("API_KEY") or os.getenv("API_KEY")
 if api_key:
     st.success("✅ API Key Loaded Successfully!")
 else:
-    st.error("❌ Failed to Load API Key!")
+    st.error("❌ Failed to Load API Key!")    
 
 
 
