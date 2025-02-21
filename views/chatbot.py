@@ -46,15 +46,15 @@ load_dotenv(dotenv_path=".env.local")
 
 api_key = st.secrets.get("API_KEY") or os.getenv("API_KEY")
 
-# ✅ API Key validation
-if not api_key:
-    st.error("❌ Failed to Load API Key! Please check your environment variables or Streamlit secrets.")
-    st.stop()  # Stop execution if API key is missing
+# # ✅ API Key validation
+# if not api_key:
+#     st.error("❌ Failed to Load API Key! Please check your environment variables or Streamlit secrets.")
+#     st.stop()  # Stop execution if API key is missing
 
-# if api_key:
-#     st.success("✅ API Key Loaded Successfully!")
-# else:
-#     st.error("❌ Failed to Load API Key!")
+if api_key:
+    st.success("✅ API Key Loaded Successfully!")
+else:
+    st.error("❌ Failed to Load API Key!")
 
 
 
