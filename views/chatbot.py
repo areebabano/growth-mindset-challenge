@@ -33,16 +33,23 @@ st.markdown("<h1>AI Chatbot 🚀✨ <span style='font-size:14px;'> By Areeba Ban
 st.markdown("🌟 Hey there!👋 I'm your AI Assistant. 🤖✨ I'm here to help you with technology, education, and general knowledge. 📚💡💻How can I assist you today? 😊🚀")
 
 
-# Load environment variables from .env.local
-load_dotenv(dotenv_path="env/.env.local")
+# # Load environment variables from .env.local
+# load_dotenv(dotenv_path="env/.env.local")
 
-# Get API Key
-api_key = os.getenv("API_KEY")
+# # Get API Key
+# api_key = os.getenv("API_KEY")
+
+# if api_key:
+#     print("API Key Loaded Successfully!")
+# else:
+#     print("Failed to Load API Key!")
+
+api_key = st.secrets.get("API_KEY") or os.getenv("API_KEY")
 
 if api_key:
-    print("API Key Loaded Successfully!")
+    st.success("✅ API Key Loaded Successfully!")
 else:
-    print("Failed to Load API Key!")
+    st.error("❌ Failed to Load API Key!")
 
 
 
