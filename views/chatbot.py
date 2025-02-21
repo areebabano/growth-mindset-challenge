@@ -31,30 +31,44 @@ st.markdown("<h1>AI Chatbot 🚀✨ <span style='font-size:14px;'> By Areeba Ban
 
 
 st.markdown("🌟 Hey there!👋 I'm your AI Assistant. 🤖✨ I'm here to help you with technology, education, and general knowledge. 📚💡💻How can I assist you today? 😊🚀")
+
+import streamlit as st
+import google.generativeai as genai
+
+# API Key Load karna
+api_key = st.secrets["gemini"]["api_key"]
+
+if not api_key:
+    st.error("❌ Failed to Load Gemini API Key!")
+else:
+    genai.configure(api_key=api_key)
+    st.success("✅ Gemini API Key Loaded Successfully!")
+
+
 st.write("API Key from Secrets:", st.secrets.get("API_KEY"))
 
 # # Load environment variables from .env.local
-load_dotenv(dotenv_path=".env.local")
+# load_dotenv(dotenv_path=".env.local")
 
-# # Get API Key
-# api_key = os.getenv("API_KEY")
+# # # Get API Key
+# # api_key = os.getenv("API_KEY")
+
+# # if api_key:
+# #     print("API Key Loaded Successfully!")
+# # else:
+# #     print("Failed to Load API Key!")
+
+# api_key = st.secrets.get("API_KEY") or os.getenv("API_KEY")
+
+# # # ✅ API Key validation
+# # if not api_key:
+# #     st.error("❌ Failed to Load API Key! Please check your environment variables or Streamlit secrets.")
+# #     st.stop()  # Stop execution if API key is missing
 
 # if api_key:
-#     print("API Key Loaded Successfully!")
+#     st.success("✅ API Key Loaded Successfully!")
 # else:
-#     print("Failed to Load API Key!")
-
-api_key = st.secrets.get("API_KEY") or os.getenv("API_KEY")
-
-# # ✅ API Key validation
-# if not api_key:
-#     st.error("❌ Failed to Load API Key! Please check your environment variables or Streamlit secrets.")
-#     st.stop()  # Stop execution if API key is missing
-
-if api_key:
-    st.success("✅ API Key Loaded Successfully!")
-else:
-    st.error("❌ Failed to Load API Key!")    
+#     st.error("❌ Failed to Load API Key!")    
 
 
 
