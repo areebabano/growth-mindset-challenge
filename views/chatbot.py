@@ -55,9 +55,9 @@ if not api_key:
     st.stop()
 else:
     genai.configure(api_key=api_key)
-    st.success("✅ Gemini API Key Loaded Successfully!")
+    # st.success("✅ Gemini API Key Loaded Successfully!")
 
-st.write("API Key from Secrets:", api_key)
+# st.write("API Key from Secrets:", api_key)
 
 
 # st.write("API Key from Secrets:", st.secrets.get("API_KEY"))
