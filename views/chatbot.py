@@ -32,20 +32,35 @@ st.markdown("<h1>AI Chatbot 🚀✨ <span style='font-size:14px;'> By Areeba Ban
 
 st.markdown("🌟 Hey there!👋 I'm your AI Assistant. 🤖✨ I'm here to help you with technology, education, and general knowledge. 📚💡💻How can I assist you today? 😊🚀")
 
+# import streamlit as st
+# import google.generativeai as genai
+
+# # API Key Load karna
+# api_key = st.secrets["gemini"]["API_KEY"]
+
+# if not api_key:
+#     st.error("❌ Failed to Load Gemini API Key!")
+# else:
+#     genai.configure(api_key=api_key)
+#     st.success("✅ Gemini API Key Loaded Successfully!")
+
 import streamlit as st
 import google.generativeai as genai
 
-# API Key Load karna
-api_key = st.secrets["gemini"]["api_key"]
+# ✅ Load API Key
+api_key = st.secrets.get("gemini", {}).get("API_KEY")
 
 if not api_key:
     st.error("❌ Failed to Load Gemini API Key!")
+    st.stop()
 else:
     genai.configure(api_key=api_key)
     st.success("✅ Gemini API Key Loaded Successfully!")
 
+st.write("API Key from Secrets:", api_key)
 
-st.write("API Key from Secrets:", st.secrets.get("API_KEY"))
+
+# st.write("API Key from Secrets:", st.secrets.get("API_KEY"))
 
 # # Load environment variables from .env.local
 # load_dotenv(dotenv_path=".env.local")
