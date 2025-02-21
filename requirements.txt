@@ -1,6 +1,5 @@
 streamlit
 requests
-re
 langchain
 langchain_community
 langchain_core
