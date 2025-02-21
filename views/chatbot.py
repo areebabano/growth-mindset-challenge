@@ -31,7 +31,7 @@ st.markdown("<h1>AI Chatbot 🚀✨ <span style='font-size:14px;'> By Areeba Ban
 
 
 st.markdown("🌟 Hey there!👋 I'm your AI Assistant. 🤖✨ I'm here to help you with technology, education, and general knowledge. 📚💡💻How can I assist you today? 😊🚀")
-
+st.write("API Key from Secrets:", st.secrets.get("API_KEY"))
 
 # # Load environment variables from .env.local
 load_dotenv(dotenv_path=".env.local")
