@@ -175,14 +175,14 @@ if st.session_state.question_index < len(questions):
 else:
     st.subheader("📊 Quiz Results")
     
-    st.write(f"✅ Correct Answers: {st.session_state.correct_answers}")
-    st.write(f"❌ Incorrect Answers: {st.session_state.wrong_answers}")
+    st.write(f"✔ Correct Answers: {st.session_state.correct_answers}")
+    st.write(f"✖ Incorrect Answers: {st.session_state.wrong_answers}")
 
     # Show correct & incorrect answers
     for q, user_ans, correct_ans in st.session_state.selected_answers:
         st.write(f"**Q:** {q}")
-        st.write(f"**Your Answer:** {user_ans}")
-        st.write(f"**Correct Answer:** {correct_ans}")
+        st.write(f"**👤Your Answer:** {user_ans}")
+        st.write(f"**☑Correct Answer:** {correct_ans}")
         st.write("---")
 
     # Show final message based on correct answers count
