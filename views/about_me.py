@@ -11,7 +11,7 @@ cols1, cols2 = st.columns(2, gap="small", vertical_alignment="center")
 with cols1:
     st.image("./assets/profile.png", width=300)
 with cols2:
-    st.title("👩‍💻 Areeba Bano", anchor=False)
+    st.title("𝔸ℝ𝔼𝔼𝔹𝔸 𝔹𝔸ℕ𝕆", anchor=False)
     st.text("🚀 Front-End Developer | 1+ Years Experience")
     st.write(
         """

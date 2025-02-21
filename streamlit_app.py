@@ -28,7 +28,8 @@ pg = st.navigation(
     }
 )
 
-st.logo("assets/mylogo.jpg")
+# st.logo("assets/mylogo.jpg")
+
 st.sidebar.text("created by 𝓐𝓻𝓮𝓮𝓫𝓪 💗")
 
 pg.run()
