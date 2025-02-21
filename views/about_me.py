@@ -27,11 +27,11 @@ st.write("\n")
 st.subheader("📌 Experience and Qualifications", anchor=False)
 st.write(
     """
-    ✅ 1+ years of hands-on experience in front-end development  
-    ✅ Skilled in building **responsive and optimized** web applications  
-    ✅ Strong foundation in modern **web technologies** and UI/UX best practices  
-    ✅ Senior student in the **GIAIC program**, continuously enhancing skills  
-    ✅ Passionate about delivering **high-performance solutions**  
+    🔹 1+ years of hands-on experience in front-end development  
+    🔹 Skilled in building **responsive and optimized** web applications  
+    🔹 Strong foundation in modern **web technologies** and UI/UX best practices  
+    🔹 Senior student in the **GIAIC program**, continuously enhancing skills  
+    🔹 Passionate about delivering **high-performance solutions**  
     """
 )
 
