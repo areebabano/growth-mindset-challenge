@@ -46,22 +46,19 @@ def display_name():
 display_name()
 """,
     "Python_3": """
-# initialize the amount variable
 amount = 10000
 
-# check that You are eligible to
-#  purchase Dsa Self Paced or not
 if(amount>2999)
     print("You are eligible to purchase Dsa Self Paced")
 """,
     "JavaScript": """
 function multiply(a, b) {
-return a * b  // Missing semicolon (Fix it!)
+return a * b  
 }
 console.log(multiply(5, 3));
 """,
     "TypeScript": """
-let age: number = "twenty";  // Type Error (Fix it!)
+let age: number = "twenty";  
 console.log(age);
 """
 }
