@@ -34,7 +34,7 @@ st.markdown("🌟 Hey there!👋 I'm your AI Assistant. 🤖✨ I'm here to help
 
 
 # # Load environment variables from .env.local
-# load_dotenv(dotenv_path="env/.env.local")
+load_dotenv(dotenv_path="env/.env.local")
 
 # # Get API Key
 # api_key = os.getenv("API_KEY")
@@ -46,10 +46,15 @@ st.markdown("🌟 Hey there!👋 I'm your AI Assistant. 🤖✨ I'm here to help
 
 api_key = st.secrets.get("API_KEY") or os.getenv("API_KEY")
 
-if api_key:
-    st.success("✅ API Key Loaded Successfully!")
-else:
-    st.error("❌ Failed to Load API Key!")
+# ✅ API Key validation
+if not api_key:
+    st.error("❌ Failed to Load API Key! Please check your environment variables or Streamlit secrets.")
+    st.stop()  # Stop execution if API key is missing
+
+# if api_key:
+#     st.success("✅ API Key Loaded Successfully!")
+# else:
+#     st.error("❌ Failed to Load API Key!")
 
 
 
