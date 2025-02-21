@@ -34,7 +34,7 @@ st.markdown("🌟 Hey there!👋 I'm your AI Assistant. 🤖✨ I'm here to help
 
 
 # # Load environment variables from .env.local
-load_dotenv(dotenv_path="env/.env.local")
+load_dotenv(dotenv_path=".env.local")
 
 # # Get API Key
 # api_key = os.getenv("API_KEY")
