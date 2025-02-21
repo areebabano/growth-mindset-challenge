@@ -15,6 +15,7 @@ from langchain.schema.output_parser import StrOutputParser
 
 import streamlit as st  
 from PIL import Image, ImageOps
+import google.generativeai as genai
 import os
 from dotenv import load_dotenv
 
@@ -43,9 +44,6 @@ st.markdown("🌟 Hey there!👋 I'm your AI Assistant. 🤖✨ I'm here to help
 # else:
 #     genai.configure(api_key=api_key)
 #     st.success("✅ Gemini API Key Loaded Successfully!")
-
-import streamlit as st
-import google.generativeai as genai
 
 # ✅ Load API Key
 api_key = st.secrets.get("gemini", {}).get("API_KEY")
